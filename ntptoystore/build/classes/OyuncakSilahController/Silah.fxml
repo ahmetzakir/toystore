@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="661.0" prefWidth="950.0" styleClass="mainFxmlClass" stylesheets="@silah.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OyuncakSilahController.SilahController">
+   <children>
+      <ImageView fitHeight="585.0" fitWidth="172.0" layoutX="778.0" layoutY="76.0">
+         <image>
+            <Image url="@../resources/satisbg.png" />
+         </image>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </ImageView>
+      <BorderPane prefHeight="90.0" prefWidth="874.0" AnchorPane.bottomAnchor="570.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="76.0" prefWidth="882.0" style="-fx-background-color: #00c7f4;" styleClass="pane" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="325.0" layoutY="10.0" prefHeight="56.0" prefWidth="301.0" text="Oyuncak Silah">
+                     <font>
+                        <Font name="Sitka Small Bold" size="39.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="backIcon" fitHeight="75.0" fitWidth="110.0" onMouseClicked="#previous" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/left.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <TableView fx:id="silahTable" layoutY="76.0" prefHeight="585.0" prefWidth="778.0">
+         <columns>
+            <TableColumn fx:id="silahResimColumn" prefWidth="221.0" text="Resim" />
+            <TableColumn fx:id="silahMarkaColumn" prefWidth="64.0" text="Marka" />
+            <TableColumn fx:id="silahCesitColumn" minWidth="0.0" prefWidth="58.0" text="Çeşit" />
+            <TableColumn fx:id="silahEbatColumn" minWidth="0.0" prefWidth="83.0" text="Ebat" />
+            <TableColumn fx:id="silahMalzemeColumn" prefWidth="92.0" text="Malzeme" />
+            <TableColumn fx:id="silahMenzilColumn" minWidth="9.0" prefWidth="77.0" text="Menzil" />
+            <TableColumn fx:id="silahRenkColumn" minWidth="2.0" prefWidth="85.0" text="Renk" />
+            <TableColumn fx:id="silahFiyatColumn" prefWidth="97.0" text="Fiyat" />
+         </columns>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </TableView>
+      <Button fx:id="satınAlButton" layoutX="794.0" layoutY="523.0" mnemonicParsing="false" onAction="#satisYap" prefHeight="79.0" prefWidth="133.0" text="Satın Al">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </Button>
+      <Button fx:id="urunListeleButton" layoutX="794.0" layoutY="137.0" mnemonicParsing="false" onAction="#urunleriListele" prefHeight="31.0" prefWidth="133.0" text="Ürünleri Listele">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </Button>
+   </children>
+</AnchorPane>

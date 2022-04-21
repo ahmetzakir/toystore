@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="646.0" prefWidth="843.0" styleClass="borderpanee" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imalat.ImalatController">
+   <children>
+      <BorderPane layoutX="127.0" layoutY="43.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="58.0" prefWidth="878.0" style="-fx-background-color: #708892;" styleClass="pane" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="261.0" layoutY="11.0" text="STOK BİLGİ SİSTEMİ" textFill="#a0c9cf">
+                     <font>
+                        <Font name="Sitka Small Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="backIcon" fitHeight="50.0" fitWidth="69.0" layoutX="14.0" layoutY="4.0" onMouseClicked="#previous" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/left.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <Pane prefHeight="590.0" prefWidth="434.0" style="-fx-background-color: #adbac0;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="91.0" layoutY="14.0" text="Stok Bilgi Arayüzü" textFill="#304771">
+                     <font>
+                        <Font name="Courier New Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="kategoriComboBox" layoutX="112.0" layoutY="59.0" prefWidth="150.0" promptText="Kategori" style="-fx-background-color: #1E8DBB;" />
+                  <TableView fx:id="oyuncakArabaTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="arabaMarkaColumn" prefWidth="54.0" text="Marka" />
+                        <TableColumn fx:id="arabaRenkColumn" prefWidth="55.0" text="Renk" />
+                        <TableColumn fx:id="arabaEbatColumn" prefWidth="63.0" text="Ebat" />
+                        <TableColumn fx:id="arabaMalzemeColumn" prefWidth="63.0" text="Malzeme" />
+                        <TableColumn fx:id="arabaKategoriColumn" prefWidth="64.0" text="Kategori" />
+                        <TableColumn fx:id="arabaSarjColumn" prefWidth="72.0" text="Ş. Süresi" />
+                        <TableColumn fx:id="arabaFiyatColumn" prefWidth="66.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="egiticiOyuncakTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="egiticiMarkaColumn" prefWidth="43.000030517578125" text="Marka" />
+                        <TableColumn fx:id="egiticiRenkColumn" prefWidth="41.0" text="Renk" />
+                        <TableColumn fx:id="egiticiEbatColumn" prefWidth="52.0" text="Ebat" />
+                        <TableColumn fx:id="egiticiMalzemeColumn" prefWidth="57.0" text="Malzeme" />
+                        <TableColumn fx:id="egiticiParcaColumn" prefWidth="72.0" text="Parça Sayısı" />
+                        <TableColumn fx:id="egiticiYasAraligiColumn" prefWidth="69.0" text="Yaş Aralığı" />
+                        <TableColumn fx:id="egiticiZorlukColumn" prefWidth="57.0" text="Zorluk" />
+                        <TableColumn fx:id="egiticiFiyatColumn" prefWidth="46.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="figurTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="figurMarkaColumn" prefWidth="58.000030517578125" text="Marka" />
+                        <TableColumn fx:id="figurCinsiyetColumn" prefWidth="62.0" text="Cinsiyet" />
+                        <TableColumn fx:id="figurGozRengiColumn" prefWidth="71.0" text="Göz Rengi" />
+                        <TableColumn fx:id="figurEbatColumn" prefWidth="56.0" text="Ebat" />
+                        <TableColumn fx:id="figurMalzemeColumn" prefWidth="73.0" text="Malzeme" />
+                        <TableColumn fx:id="figurTurColumn" prefWidth="52.0" text="Tür" />
+                        <TableColumn fx:id="figurFiyatColumn" prefWidth="61.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="bebekTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="bebekMarkaColumn" prefWidth="51.0" text="Marka" />
+                        <TableColumn fx:id="bebekEbatColumn" prefWidth="58.0" text="Ebat" />
+                        <TableColumn fx:id="bebekCinsiyetColumn" prefWidth="62.0" text="Cinsiyet" />
+                        <TableColumn fx:id="bebekGozRengiColumn" prefWidth="64.0" text="Göz Rengi" />
+                        <TableColumn fx:id="bebekMalzemeColumn" prefWidth="69.0" text="Malzeme" />
+                        <TableColumn fx:id="bebekSacRengiColumn" prefWidth="69.0" text="Saç Rengi" />
+                        <TableColumn fx:id="bebekFiyatColumn" prefWidth="61.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="evTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="evMarkaColumn" prefWidth="51.0" text="Marka" />
+                        <TableColumn fx:id="evEbatColumn" prefWidth="58.0" text="Ebat" />
+                        <TableColumn fx:id="evOyuncuSayisiColumn" prefWidth="88.66667175292969" text="Oyuncu Sayısı" />
+                        <TableColumn fx:id="evParcaSayisiColumn" prefWidth="71.33332824707031" text="Parça Sayısı" />
+                        <TableColumn fx:id="evMalzemeColumn" prefWidth="57.66667175292969" text="Malzeme" />
+                        <TableColumn fx:id="evRenkColumn" prefWidth="47.66668701171875" text="Renk" />
+                        <TableColumn fx:id="evFiyatColumn" prefWidth="61.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="helikopterTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="helikopterMarkaColumn" prefWidth="51.0" text="Marka" />
+                        <TableColumn fx:id="helikopterEbatColumn" prefWidth="58.0" text="Ebat" />
+                        <TableColumn fx:id="helikopterMenzilColumn" prefWidth="71.66667175292969" text="Menzil" />
+                        <TableColumn fx:id="helikopterSarjSuresiColumn" prefWidth="89.33332824707031" text="Sarj Süresi" />
+                        <TableColumn fx:id="helikopterMalzemeColumn" prefWidth="57.66667175292969" text="Malzeme" />
+                        <TableColumn fx:id="helikopterRenkColumn" prefWidth="47.66668701171875" text="Renk" />
+                        <TableColumn fx:id="helikopterFiyatColumn" prefWidth="61.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="legoTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="legoMarkaColumn" prefWidth="51.0" text="Marka" />
+                        <TableColumn fx:id="legoEbatColumn" prefWidth="58.0" text="Ebat" />
+                        <TableColumn fx:id="legoParcaSayisiColumn" prefWidth="71.66667175292969" text="Parça Sayısı" />
+                        <TableColumn fx:id="legoZorlukColumn" prefWidth="89.33332824707031" text="Zorluk" />
+                        <TableColumn fx:id="legoMalzemeColumn" prefWidth="57.66667175292969" text="Malzeme" />
+                        <TableColumn fx:id="legoRenkColumn" prefWidth="47.66668701171875" text="Renk" />
+                        <TableColumn fx:id="legoFiyatColumn" prefWidth="61.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="pelusTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="pelusMarkaColumn" prefWidth="51.0" text="Marka" />
+                        <TableColumn fx:id="pelusEbatColumn" prefWidth="58.0" text="Ebat" />
+                        <TableColumn fx:id="pelusTurColumn" prefWidth="71.66667175292969" text="Tür" />
+                        <TableColumn fx:id="pelusGozRengiColumn" prefWidth="89.33332824707031" text="Göz Rengi" />
+                        <TableColumn fx:id="pelusMalzemeColumn" prefWidth="57.66667175292969" text="Malzeme" />
+                        <TableColumn fx:id="pelusRenkColumn" prefWidth="47.66668701171875" text="Renk" />
+                        <TableColumn fx:id="pelusFiyatColumn" prefWidth="61.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="silahTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="silahMarkaColumn" prefWidth="51.0" text="Marka" />
+                        <TableColumn fx:id="silahEbatColumn" prefWidth="58.0" text="Ebat" />
+                        <TableColumn fx:id="silahCesitColumn" prefWidth="71.66667175292969" text="Çesit" />
+                        <TableColumn fx:id="silahMenzilColumn" prefWidth="89.33332824707031" text="Menzil" />
+                        <TableColumn fx:id="silahMalzemeColumn" prefWidth="57.66667175292969" text="Malzeme" />
+                        <TableColumn fx:id="silahRenkColumn" prefWidth="47.66668701171875" text="Renk" />
+                        <TableColumn fx:id="silahFiyatColumn" prefWidth="61.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="trenTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="trenMarkaColumn" prefWidth="61.66666793823242" text="Marka" />
+                        <TableColumn fx:id="trenEbatColumn" prefWidth="62.33333206176758" text="Ebat" />
+                        <TableColumn fx:id="trenUzunlukColumn" prefWidth="84.33332824707031" text="Uzunluk" />
+                        <TableColumn fx:id="trenMalzemeColumn" prefWidth="57.333343505859375" text="Malzeme" />
+                        <TableColumn fx:id="trenParcaSayisiColumn" prefWidth="99.0" text="Parça Sayısı" />
+                        <TableColumn fx:id="trenFiyatColumn" prefWidth="69.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="puzzleTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="puzzleMarkaColumn" prefWidth="61.66666793823242" text="Marka" />
+                        <TableColumn fx:id="puzzleEbatColumn" prefWidth="62.33333206176758" text="Ebat" />
+                        <TableColumn fx:id="puzzleZorlukColumn" prefWidth="84.33332824707031" text="Zorluk" />
+                        <TableColumn fx:id="puzzleMalzemeColumn" prefWidth="57.333343505859375" text="Malzeme" />
+                        <TableColumn fx:id="puzzleParcaSayisiColumn" prefWidth="99.0" text="Parça Sayısı" />
+                        <TableColumn fx:id="puzzleFiyatColumn" prefWidth="69.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="kutuTable" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                     <columns>
+                        <TableColumn fx:id="kutuMarkaColumn" prefWidth="61.66666793823242" text="Marka" />
+                        <TableColumn fx:id="kutuEbatColumn" prefWidth="62.33333206176758" text="Ebat" />
+                        <TableColumn fx:id="kutuZorlukColumn" prefWidth="84.33332824707031" text="Uzunluk" />
+                        <TableColumn fx:id="kutuMalzemeColumn" prefWidth="57.333343505859375" text="Malzeme" />
+                        <TableColumn fx:id="kutuOyuncuSayisiColumn" prefWidth="99.0" text="Parça Sayısı" />
+                        <TableColumn fx:id="kutuFiyatColumn" prefWidth="69.0" text="Fiyat" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="tableView" layoutX="-2.0" layoutY="149.0" prefHeight="439.0" prefWidth="438.0" style="-fx-background-color: #adbac0;">
+                    <columns>
+                      <TableColumn fx:id="markaColumn" prefWidth="125.00003051757812" text="Marka" />
+                        <TableColumn fx:id="ebatColumn" prefWidth="113.0" text="Ebat" />
+                        <TableColumn fx:id="malzemeColumn" prefWidth="121.0" text="Malzeme" />
+                        <TableColumn fx:id="fiyatColumn" prefWidth="79.0" text="Fiyat" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <Pane prefHeight="595.0" prefWidth="440.0" style="-fx-background-color: #adbac0;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="58.0" layoutY="14.0" text="Stok Ekleme Arayüzü" textFill="#304771">
+                     <font>
+                        <Font name="Courier New Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="markaText" layoutX="25.0" layoutY="83.0" promptText="Marka" />
+                  <TextField fx:id="malzemeText" layoutX="202.0" layoutY="138.0" promptText="Malzeme" />
+                  <TextField fx:id="ebattext" layoutX="25.0" layoutY="138.0" promptText="Ebat" />
+                  <TextField fx:id="fiyatText" layoutX="202.0" layoutY="83.0" promptText="Fiyat" />
+                  <Button fx:id="ekleButton" layoutX="116.0" layoutY="396.0" mnemonicParsing="false" onAction="#createOyuncak" prefHeight="39.0" prefWidth="173.0" style="-fx-background-color: #6395c6;" text="Ekle" />
+                  <Line endY="1.5" startY="588.0" />
+                  <TextField fx:id="arabaRenkText" layoutX="25.0" layoutY="270.0" promptText="Renk" />
+                  <TextField fx:id="arabaKategoriText" layoutX="25.0" layoutY="309.0" promptText="Kategori" />
+                  <TextField fx:id="arabaSarjText" layoutX="202.0" layoutY="270.0" promptText="Şarj Süresi" />
+                  <TextField fx:id="egiticiRenkText" layoutX="25.0" layoutY="270.0" promptText="Renk" />
+                  <TextField fx:id="egiticiParcaText" layoutX="202.0" layoutY="270.0" promptText="Parça Sayısı" />
+                  <TextField fx:id="egiticiYasAraligiText" layoutX="25.0" layoutY="309.0" promptText="Yaş Aralığı" />
+                  <TextField fx:id="egiticiZorlukText" layoutX="202.0" layoutY="309.0" promptText="Zorluk" />
+                  <TextField fx:id="figurCinsiyetText" layoutX="25.0" layoutY="270.0" promptText="Cinsiyet" />
+                  <TextField fx:id="figurGozRengiText" layoutX="202.0" layoutY="270.0" promptText="Göz Rengi" />
+                  <TextField fx:id="figurTurText" layoutX="25.0" layoutY="309.0" promptText="Figür Türü" />
+                  <TextField fx:id="bebekCinsiyetText" layoutX="25.0" layoutY="270.0" promptText="Cinsiyet" />
+                  <TextField fx:id="bebekGozRengiText" layoutX="202.0" layoutY="270.0" promptText="Göz Rengi" />
+                  <TextField fx:id="bebekSacRengiText" layoutX="25.0" layoutY="309.0" promptText="Saç Rengi" />
+                  <TextField fx:id="evParcaSayisiText" layoutX="25.0" layoutY="270.0" promptText="Parça Sayısı" />
+                  <TextField fx:id="evOyuncuSayisiText" layoutX="202.0" layoutY="270.0" promptText="Oyuncu Sayısı" />
+                  <TextField fx:id="evRenkText" layoutX="25.0" layoutY="309.0" promptText="Renk" />
+                  <TextField fx:id="helikopterSarjSuresiText" layoutX="25.0" layoutY="270.0" promptText="Sarj Süresi" />
+                  <TextField fx:id="helikopterMenzilText" layoutX="202.0" layoutY="270.0" promptText="Menzil" />
+                  <TextField fx:id="helikopterRenkText" layoutX="25.0" layoutY="309.0" promptText="Renk" />
+                  <TextField fx:id="legoParcaSayisiText" layoutX="25.0" layoutY="270.0" promptText="Parça Sayısı " />
+                  <TextField fx:id="legoZorlukText" layoutX="202.0" layoutY="270.0" promptText="Zorluk" />
+                  <TextField fx:id="legoRenkText" layoutX="25.0" layoutY="309.0" promptText="Renk" />
+                  <TextField fx:id="pelusGozRengiText" layoutX="25.0" layoutY="270.0" promptText="Göz Rengi" />
+                  <TextField fx:id="pelusTurText" layoutX="202.0" layoutY="270.0" promptText="Tür" />
+                  <TextField fx:id="pelusRenkText" layoutX="25.0" layoutY="309.0" promptText="Renk" />
+                  <TextField fx:id="silahCesitText" layoutX="25.0" layoutY="270.0" promptText="Çeşit" />
+                  <TextField fx:id="silahMenzilText" layoutX="202.0" layoutY="270.0" promptText="Menzil" />
+                  <TextField fx:id="silahRenkText" layoutX="25.0" layoutY="309.0" promptText="Renk" />
+                  <TextField fx:id="trenUzunlukText" layoutX="25.0" layoutY="270.0" promptText="Uzunluk" />
+                  <TextField fx:id="trenParcaSayisiText" layoutX="202.0" layoutY="270.0" promptText="Parça Sayısı" />
+                  <TextField fx:id="puzzleZorlukText" layoutX="25.0" layoutY="270.0" promptText="Zorluk" />
+                  <TextField fx:id="kutuOyuncuSayisiText" layoutX="202.0" layoutY="270.0" promptText="Oyuncu Sayısı" />
+                  <TextField fx:id="kutuZorlukText" layoutX="25.0" layoutY="270.0" promptText="Zorluk" />
+                  <TextField fx:id="puzzleParcaSayisiText" layoutX="202.0" layoutY="270.0" promptText="Parça Sayısı" />
+                  <Button fx:id="silButton" layoutX="116.0" layoutY="462.0" mnemonicParsing="false" onAction="#deleteOyuncak" prefHeight="39.0" prefWidth="173.0" style="-fx-background-color: #6395c6;" text="Sil" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

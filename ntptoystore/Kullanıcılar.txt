@@ -1,0 +1,10 @@
+admin$admin+admin,admin#admin@gmail.com&Türkiye%999
+info$123+test,test#test@gmail.com&Amerika%145
+asd$123+selo,selo#selo@gmail.com&Türkiye%123
+testingnow$123+test,testing#testing@gmail.com&Almanya%543
+satınalmış$123+satınaldı,satınalan#satınalan@gmail.com&Suriye%0
+selo$123+Yıldırım,Selehattin#selo@gmail.com&Türkiye%535
+talha$1234+YILMAZ,Talha#talha@gmail.com&Türkiye%5320063
+talha$12345+yılmaz,talha#talhayılmaz@gmail.com&Türkiye%956
+info$12345+test,info#testing@gmail.com&Türkiye%111
+infotest$12345+yılmaz,talha#talha@gmail.com&Türkiye%0

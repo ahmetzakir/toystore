@@ -1,0 +1,1 @@
+DC,Erkek,Mavi,20,Plastik,BATMAN,460

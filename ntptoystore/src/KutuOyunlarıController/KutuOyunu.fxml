@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="661.0" prefWidth="950.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="KutuOyunlarıController.KutuOyunuController">
+    <stylesheets>
+        <URL value="@kutuoyunu.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="76.0" prefWidth="882.0" styleClass="pane">
+         <children>
+            <Label layoutX="372.0" layoutY="10.0" prefHeight="56.0" prefWidth="115.0" text="Puzzle">
+               <font>
+                  <Font name="Candara" size="39.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane id="AnchorPane" prefHeight="661.0" prefWidth="950.0" styleClass="mainFxmlClass" stylesheets="@../PuzzleController/puzzle.css">
+         <children>
+            <ImageView fitHeight="585.0" fitWidth="172.0" layoutX="778.0" layoutY="76.0">
+               <image>
+                  <Image url="@../resources/satisbgturuncu.png" />
+               </image>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </ImageView>
+            <BorderPane prefHeight="90.0" prefWidth="874.0" AnchorPane.bottomAnchor="570.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <Pane prefHeight="76.0" prefWidth="882.0" style="-fx-background-color: e89201;" styleClass="pane" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="324.0" layoutY="10.0" prefHeight="56.0" prefWidth="302.0" text="Kutu Oyunları">
+                           <font>
+                              <Font name="Sitka Small Bold" size="39.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="backIcon" fitHeight="75.0" fitWidth="110.0" onMouseClicked="#previous" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/left.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </top>
+            </BorderPane>
+            <TableView fx:id="kutuTable" layoutY="76.0" prefHeight="585.0" prefWidth="778.0">
+               <columns>
+                  <TableColumn fx:id="kutuResimColumn" prefWidth="221.0" text="Resim" />
+                  <TableColumn fx:id="kutuMarkaColumn" prefWidth="96.0" text="Marka" />
+                  <TableColumn fx:id="kutuEbatColumn" minWidth="0.0" text="Ebat" />
+                  <TableColumn fx:id="kutuMalzemeColumn" prefWidth="85.0" text="Malzeme" />
+                  <TableColumn fx:id="kutuZorlukColumn" minWidth="9.0" prefWidth="96.0" text="Zorluk" />
+                  <TableColumn fx:id="kutuOyuncuSayisiColumn" minWidth="2.0" prefWidth="126.0" text="Oyuncu Sayısı" />
+                  <TableColumn fx:id="kutuFiyatColumn" prefWidth="73.0" text="Fiyat" />
+               </columns>
+            </TableView>
+            <Button fx:id="satınAlButton" layoutX="794.0" layoutY="523.0" mnemonicParsing="false" onAction="#satisYap" prefHeight="79.0" prefWidth="133.0" text="Satın Al" />
+            <Button fx:id="urunListeleButton" layoutX="794.0" layoutY="137.0" mnemonicParsing="false" onAction="#urunleriListele" prefHeight="31.0" prefWidth="133.0" text="Ürünleri Listele" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

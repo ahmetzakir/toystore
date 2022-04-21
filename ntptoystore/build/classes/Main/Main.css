@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14.Nis.2020, 18:40:44
+    Author     : HP
+*/
+
+/*Main Tarafı İlk Sayfa */
+
+.buttons{
+   -fx-background-color: #60E74E;
+   -fx-background-radius: 20px;
+   -fx-opacity: 0.8;
+   
+
+}
+
+.buttons:hover{
+    -fx-background-color: #B0F68D ;
+    -fx-border-color: #00EC94;
+    -fx-border-radius: 20px;
+    -fx-border-width: 5px;
+    -fx-text-fill: #1A5F45 ;
+    -fx-opacity: 1;
+    
+    
+}
+
+.baslik{
+  -fx-text-fill: #1DC6F1;
+}
+
+.anchorpane{
+    -fx-background-color: #CBE4EA ;
+}
+
+/* LOgin*/
+.soltaraf{
+    -fx-background-color:#E7604E;
+}
+
+.sagtaraf{
+    -fx-background-color:#AFE5ED;
+}
+
+.loginbuton{
+    -fx-background-color:#7664E5;
+    -fx-background-radius:12px;
+}
+
+

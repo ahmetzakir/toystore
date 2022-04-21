@@ -1,0 +1,10 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: #4AFF85;
+}
+.pane{
+    -fx-background-color: #1FB450;
+}
